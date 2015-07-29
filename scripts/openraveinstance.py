@@ -243,6 +243,9 @@ class OpenraveInstance:
     def addMaskedObjectToOctomap(self, name):
         out = self.or_octomap_server.SendCommand("Mask " + name)
 
+    def UpdateMaskedObjectInOctomap(self, name):
+        out = self.or_octomap_server.SendCommand("UpdateMask " + name)
+
     def removeMaskedObjectFromOctomap(self, name):
         out = self.or_octomap_server.SendCommand("Unmask " + name)
 
